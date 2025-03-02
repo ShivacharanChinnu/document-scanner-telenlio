@@ -1,0 +1,313 @@
+/* Basic reset for margins, padding, and box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    /* Use Georgia font for a classic, readable look */
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+  }
+  
+  .welc {
+    /* Set a nice dark green color for welcome text */
+    color: #191f1d;
+  }
+  
+  /* Main container to center everything on the page */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    flex-direction: column;
+  }
+  
+  /* Header styling for a consistent look across pages */
+  header {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Style buttons to look clean and interactive */
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Styling for the admin dashboard background and text */
+  body.admin {
+    background-color: #0B2E33;
+    color: #354040;
+  }
+  
+  .admin header {
+    /* Header background and text color for admin pages */
+    background-color: #4F7C82;
+    color: #0B2E33;
+  }
+  
+  .admin .requests, .admin .analytics {
+    /* Cards for requests and analytics with a subtle shadow */
+    background: #4F7C82;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+    margin: 15px 0;
+  }
+  
+  .admin h2 {
+    /* Headings for admin sections */
+    color: #252c2c;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .admin .requests ul li {
+    /* List items for credit requests in admin */
+    padding: 15px;
+    border-bottom: 1px solid #0B2E33;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3a5f64;
+    margin-bottom: 5px;
+    border-radius: 4px;
+  }
+  
+  .admin .requests ul li:last-child {
+    /* Remove border from the last list item */
+    border-bottom: none;
+  }
+  
+  .admin button {
+    /* Buttons for admin actions */
+    background-color: #0B2E33;
+    color: #E6F0F0;
+  }
+  
+  .admin button:hover {
+    /* Hover effect for admin buttons */
+    background-color: #1a4045;
+  }
+  
+  /* Styling for the user dashboard background and text */
+  body.dashboard {
+    background-color: #2c3130;
+    color: #3b4845;
+  }
+  
+  .dashboard header {
+    /* Header styling for the user dashboard */
+    background-color: #AAB8B6;
+    color: #3a3f3f;
+  }
+  
+  .dashboard .profile, .dashboard .matches {
+    /* Cards for user profile and matches */
+    background: #818e8c;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    margin: 15px 0;
+  }
+  
+  .dashboard h2 {
+    /* Main headings for dashboard sections */
+    color: #191f1d;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .dashboard h3 {
+    /* Subheadings for matches */
+    color: #23302d;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .dashboard input[type="file"] {
+    /* File input styling for uploads */
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #545B5A;
+    border-radius: 6px;
+    background: #ffffff;
+  }
+  
+  .dashboard .profile-buttons {
+    /* Arrange buttons in a row with spacing */
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .dashboard button {
+    /* Buttons for dashboard actions */
+    background-color: #545B5A;
+    color: #E6F0F0;
+  }
+  
+  .dashboard button:hover {
+    /* Hover effect for dashboard buttons */
+    background-color: #3e4544;
+  }
+  
+  .dashboard .matches ul li {
+    /* List items for matching documents */
+    padding: 12px;
+    border-bottom: 1px solid #8a9694;
+    background: #ffffff;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    color: #283432;
+  }
+  
+  /* Styling for the login page with a glass-morphic effect */
+  body.login {
+    background: linear-gradient(135deg, #C71585, #D81B60);
+    color: #333;
+  }
+  
+  .login header {
+    /* Header for the login page */
+    background-color: #ffffff;
+    color: #C71585;
+  }
+  
+  .login .auth-card {
+    /* Glass effect card for login form */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 20px auto;
+  }
+  
+  .login h2 {
+    /* Title for the login form */
+    color: #8A2BE2;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: bold;
+  }
+  
+  .login input[type="text"],
+  .login input[type="password"] {
+    /* Input fields with icons for login */
+    width: 100%;
+    padding: 15px 15px 15px 50px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .login input[type="text"]:focus,
+  .login input[type="password"]:focus {
+    /* Focus effect for input fields */
+    border-color: #8A2BE2;
+  }
+  
+  .login #username {
+    /* User icon for username field */
+    background-image: url('https://cdn-icons-png.flaticon.com/512/1077/1077114.png');
+  }
+  
+  .login #password {
+    /* Lock icon for password field */
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3064/3064155.png');
+  }
+  
+  .login button {
+    /* Login button styling */
+    background-color: #FF1493;
+    color: #ffffff;
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0 10px;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+  
+  .login button:hover {
+    /* Hover effect for login button */
+    background-color: #FF69B4;
+  }
+  
+  .login .forgot-password {
+    /* Forgot password link */
+    color: #8A2BE2;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  .login .forgot-password:hover {
+    /* Hover effect for forgot password link */
+    text-decoration: underline;
+  }
+  
+  /* Styling for the "Keep me logged in" checkbox */
+  .login .keep-logged {
+    margin: 15px 0;
+    color: #8A2BE2;
+    font-size: 14px;
+  }
+  
+  .login .keep-logged input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  /* Adjust styles for smaller screens */
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+    header h1 {
+      font-size: 24px;
+    }
+    .admin .requests, .admin .analytics,
+    .dashboard .profile, .dashboard .matches,
+    .login .auth-card {
+      padding: 20px;
+      max-width: 100%;
+      margin: 10px 0;
+    }
+  }
